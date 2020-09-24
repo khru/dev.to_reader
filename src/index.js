@@ -1,5 +1,3 @@
-import "./styles.css";
-
 new Vue({
   el: "#app",
   data: {
