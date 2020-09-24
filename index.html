@@ -61,7 +61,7 @@
              </div>
            </div>
          </div>
-         <section v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+         <section v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="800">
          <div
            v-for="article in filterArticlesBySearch"
            class="flex flex-wrap mt-10 xl-12"
@@ -244,6 +244,7 @@
                      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
                      >#{{tag}}</span
                    ></a
+                   class="hover:text-red-500 py-1 pl-1 pr-2 text-gray-600 text-sm rounded hover:bg-gray-100 hover:text-black"
                  >
                </div>
              </section>
@@ -266,6 +267,7 @@
                    </svg>
                    {{article.public_reactions_count}}<span class="hidden md:inline"
                      >&nbsp;reactions</span
+                     xmlns="http://www.w3.org/2000/svg"
                    >
                  </a>
                  <a
@@ -313,4 +315,3 @@
         <script src="src/index.js"></script>
     </footer>
   </body>
-</html>
