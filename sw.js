@@ -3,8 +3,6 @@ self.addEventListener('install', e => {
     caches.open('dev-to-reader').then(cache => {
         return cache.addAll([
             '/',
-            'dev.to/',
-            'res.cloudinary.com/'
         ])
             .then(() => self.skipWaiting());
     })
