@@ -15,6 +15,19 @@
         <meta name="application-name" content="dev.to reader 📖">
         <meta name="theme-color" content="#000000">
         <link rel="manifest" href="/manifest.json">
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+              navigator.serviceWorker.register('./sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              }, function(err) {
+                // registration failed :(
+                console.error('ServiceWorker registration failed: ', err);
+              });
+            });
+          }
+        </script>
     <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
