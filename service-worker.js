@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
  e.waitUntil(
-    caches.open('airhorner').then(cache => {
+    caches.open('dev-to-reader').then(cache => {
         return cache.addAll([
             '/',
             'dev.to/',
