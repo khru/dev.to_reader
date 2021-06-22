@@ -71,12 +71,14 @@
                class="w-full rounded overflow-hidden hover:shadow-xl shadow-lg ml-2 mr-2"
              >
                <img
+                 loading="lazy" 
                  v-if="article.cover_image"
                  class="w-full"
                  v-bind:src="article.cover_image"
                  alt="Sunset in the mountains"
                />
                <img
+                 loading="lazy" 
                  v-if="!article.cover_image"
                  class="w-full"
                  v-bind:src="article.social_image"
@@ -93,6 +95,7 @@
                <div class="px-6 p-y4">
                  <div class="flex items-center">
                    <img
+                     loading="lazy" 
                      class="w-10 h-10 rounded-full mr-4"
                      v-bind:src="article.user.profile_image"
                      v-bind:alt="'Avatar of ' + article.user.name"
@@ -222,6 +225,7 @@
                            target="_blank"
                          >
                            <img
+                             loading="lazy" 
                              class="w-6 h-6 rounded-full inline-block"
                              v-bind:src="article.organization.profile_image"
                              :title="article.organization.name"
